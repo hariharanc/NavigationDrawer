@@ -1,0 +1,71 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rr_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#A5045A"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rr_circle_img"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:color/darker_gray" >
+
+            <com.example.circleimageview.CircleImageView
+                android:id="@+id/cir_prof_img"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/prof_img" />
+
+            <TextView
+                android:id="@+id/txt_prof_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/cir_prof_img"
+                android:text="Profile Name"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rr_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rr_circle_img"
+            android:layout_marginTop="5dp" >
+
+            <ListView
+                android:id="@+id/list_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorPrimaryDark"
+                android:dividerHeight="1px" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
